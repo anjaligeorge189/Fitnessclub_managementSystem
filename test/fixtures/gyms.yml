@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  package_ID: 1
+  package_name: MyString
+  duration: MyString
+  price: 1
+
+two:
+  package_ID: 1
+  package_name: MyString
+  duration: MyString
+  price: 1

@@ -1,0 +1,21 @@
+<div
+    class="p-5 text-center bg-image"
+    style="
+      background-image: url('https://wallpaperaccess.com/full/1087579.jpg');
+      height: 1000px;
+      width: : 1000px;
+    " >
+   <br><br><center><h1 style="color:white">Home Page</h1></center></br></br>
+<% if current_user %>
+ Logged in as <%= current_user.email %>.
+ <%= link_to 'Log Out', logout_path %>
+<% else %>
+ <center><h2 style="color:white"><%= link_to 'Sign Up', signup_path%> </h2>or
+ <h2 style="color:white"><%= link_to 'Log In', login_path %></h2></center>
+<% end %>
+<p id='notice'><%= notice %></p>
+</div>
+
+
+
+

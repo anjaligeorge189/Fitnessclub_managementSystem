@@ -1,0 +1,34 @@
+<div
+    class="p-5 text-center bg-image"
+    style="
+      background-image: url('https://images.unsplash.com/photo-1560233026-ad254fa8da38?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTB8fGZpdG5lc3N8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+          background-repeat: no-repeat;
+  background-attachment: fixed;
+   background-position: center;
+      height: 1000px;
+      width: : 1000px;
+    " >
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Package id:</strong>
+  <%= @gym.package_ID %>
+</p>
+
+<p>
+  <strong>Package name:</strong>
+  <%= @gym.package_name %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @gym.duration %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @gym.price %>
+</p>
+
+<%= link_to 'Edit', edit_gym_path(@gym) %> |
+<%= link_to 'Back', gyms_path %>

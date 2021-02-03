@@ -1,0 +1,28 @@
+<div
+    class="p-6 text-center bg-image"
+    style="
+      background-image: url('https://images.pexels.com/photos/963697/pexels-photo-963697.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+       background-repeat: no-repeat;
+  background-attachment: fixed;
+   background-position: center;
+
+      height: 1500px;
+      width: : 1500px;
+    " >
+<p id='alert'><%= alert %></p>
+<br><center><h1 style="color:white">Login</h1></center></br>
+<%= form_tag sessions_path do |form| %>
+ <div class='field'>
+   <center><%= label_tag :email %></center>
+   <center><%= text_field_tag :email %></center>
+ </div>
+ <div class='field'>
+  <center> <%= label_tag :password %></center>
+   <center><%= password_field_tag :password %></center>
+ </div>
+ <div class='actions'>
+   <center><%= submit_tag 'Login' %></center>
+ </div>
+<% end %>
+
+</div>

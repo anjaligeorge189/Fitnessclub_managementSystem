@@ -1,0 +1,47 @@
+<div
+    class="p-5 text-center bg-image"
+    style="
+      background-image: url('https://images.unsplash.com/photo-1560233026-ad254fa8da38?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTB8fGZpdG5lc3N8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+          background-repeat: no-repeat;
+  background-attachment: fixed;
+   background-position: center;
+      height: 1000px;
+      width: : 1000px;
+    " >
+<%= form_with(model: gym, local: true) do |form| %>
+  <% if gym.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gym.errors.count, "error") %> prohibited this gym from being saved:</h2>
+
+      <ul>
+        <% gym.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :package_ID %>
+    <%= form.number_field :package_ID %>
+  </div>
+
+  <div class="field">
+    <%= form.label :package_name %>
+    <%= form.text_field :package_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duration %>
+    <%= form.text_field :duration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
